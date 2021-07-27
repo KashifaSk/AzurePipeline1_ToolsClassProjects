@@ -8,8 +8,8 @@
     <artifactId>Book_project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
         <aspectj.version>1.9.4</aspectj.version>
         <allure.version>2.13.0</allure.version>
