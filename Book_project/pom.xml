@@ -15,7 +15,6 @@
         <allure.version>2.13.0</allure.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <allure.cmd.download.url>https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline </allure.cmd.download.url>
-
     </properties>
     <dependencies>
         <dependency>
@@ -76,17 +75,6 @@
                <configuration>
                    <reportVersion>2.13.0</reportVersion>
                    <allureDownloadUrl>${allure.cmd.download.url}/${allure.version}/allure-commandline-${allure.version}.zip </allureDownloadUrl>
-               </configuration>
-           </plugin>
-           <!-- Maven plugin to use perticular java version to compile code -->
-
-           <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>3.8.1</version>
-               <configuration>
-                   <source>15</source>
-                   <target>15</target>
                </configuration>
            </plugin>
        </plugins>
