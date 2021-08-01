@@ -1,14 +1,11 @@
-trigger:
-
-  master
 pool:
-vmImage: 'ubuntu-latest'
+vmImage: 'ubuntu-16.04'
 
 steps:
 
 - task: Maven@3
    inputs:
-   mavenPomFile: 'pom.xml'
+   mavenPomFile: 'Book_project/pom.xml'
    mavenOptions: '-Xmx3072m'
    javaHomeOption: 'JDKVersion'
    jdkVersionOption: '1.8'
