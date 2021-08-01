@@ -1,0 +1,22 @@
+pool:
+  vmImage:'ubuntu-16.04'
+  demands: maven
+
+steps:
+- task: Maven@3
+ displayName: 'Maven Book_project/pom.xml'
+ inputs:
+   mavenPomFile: 'Book_project/pom.xml'
+
+- task: CopyFiles@2
+    displayName: 'Copy Files to: $ (build.artifactstagingdirectory)'
+    inputs:
+      SourceFolder: '$(system.defaultworkingdirectory)'
+      Contents: '**/*.jar'
+      TargetFolder: '$(system.artifactstagingdirectory)'
+    condition: succeededOrFailed()
+- task: PublishBuildArtifact@1
+    displayName: 'Publish Artifact: drop'
+    inputs:
+      PathtoPublish: '$(build.artifactstagningdirectory)'
+    condition: succeededOrFailed()
